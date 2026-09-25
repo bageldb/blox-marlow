@@ -1,0 +1,15 @@
+/* Site theme overrides — customize as needed */
+:root {
+	--bgl-primary: #2563eb;
+	--bgl-font: "Inter", system-ui, sans-serif;
+	--bgl-font-size: 16px;
+	--bgl-bg: #fff;
+	--bgl-btn-border-radius: 8px;
+	--bgl-card-border-radius: 12px;
+	--bgl-input-border-radius: 8px;
+}
+
+body {
+	margin: 0;
+	font-family: var(--bgl-font);
+}

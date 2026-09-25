@@ -1,0 +1,28 @@
+{
+  "name": "@bageldb/blox-marlow",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build && bun run build:prerender && bun run ssg && bun run assert:output",
+    "build:prerender": "vite build --ssr",
+    "ssg": "blox-ssg",
+    "ssg:dev": "blox-ssg --mode=development",
+    "ssg:local": "blox-ssg --mode=localhost",
+    "assert:output": "test -f dist/index.html && test -f dist/.blox-manifest.json",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@bagelink/blox": "^1.15.504",
+    "@bagelink/vue": "^1.15.504",
+    "@bagelink/workspace": "^1.15.504",
+    "vue-router": "^4.6.4"
+  },
+  "devDependencies": {
+    "@types/node": "latest",
+    "@vitejs/plugin-vue": "^5",
+    "happy-dom": "latest",
+    "vite": "^5",
+    "vue": "latest"
+  }
+}
