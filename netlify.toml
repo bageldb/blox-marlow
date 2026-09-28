@@ -4,3 +4,10 @@
 
 [build.environment]
   BUN_VERSION = "1.2.23"
+
+# The Blox designer embeds this client-only route in an iframe; it is not
+# prerendered, so serve the app shell.
+[[redirects]]
+  from = "/_blox_preview"
+  to = "/index.html"
+  status = 200
