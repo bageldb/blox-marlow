@@ -16,13 +16,13 @@
 		"@bagelink/blox": "^1.15.645",
 		"@bagelink/vue": "^1.15.645",
 		"@bagelink/workspace": "^1.15.645",
-		"vue-router": "^4.6.4"
+		"vue-router": "^5.4.0"
 	},
   "devDependencies": {
     "@types/node": "latest",
-    "@vitejs/plugin-vue": "^5",
+    "@vitejs/plugin-vue": "^6",
     "happy-dom": "latest",
-    "vite": "^5",
+    "vite": "^8",
     "vue": "latest"
   }
 }
