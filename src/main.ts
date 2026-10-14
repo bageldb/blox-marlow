@@ -21,6 +21,12 @@ createBloxApp({
 	modules: blocks as Record<string, any>,
 	websiteName,
 	store: websiteName,
+	// This site is prerendered to static HTML, so navigation must be full
+	// document loads: a click opens the already-built page. The default 'spa'
+	// mode would route on the client and call /blox/websites/<id>/resolve-path
+	// for pages it has no payload for — which fails on a static host (no API on
+	// the site's origin, and the endpoint requires auth).
+	navigation: 'document',
 	apiBaseURL: import.meta.env.VITE_BLOX_API_URL ?? '/api',
 	plugins: [[BagelVue, {}]],
 	globalComponents: { RouterWrapper },
