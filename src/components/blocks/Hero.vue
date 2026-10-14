@@ -121,6 +121,9 @@ const hasImage = computed(() => imageSrc.value !== '')
 <style scoped>
 .blk-hero__media {
 	aspect-ratio: 4 / 3;
+	border: 1px solid var(--bgl-border-color, rgba(255, 255, 255, 0.1));
+	/* A deep, soft drop shadow seats the image on the dark canvas. */
+	box-shadow: 0 40px 80px -40px rgba(0, 0, 0, 0.9);
 }
 
 /* The split layout is a two-column grid only where the image exists. */
@@ -128,6 +131,11 @@ const hasImage = computed(() => imageSrc.value !== '')
 	grid-template-columns: minmax(0, 1fr);
 	max-width: 52rem;
 	margin-inline: auto;
+}
+
+/* Centred hero gets a taller headline. */
+.blk-hero--centred h1 {
+	font-size: clamp(2.5rem, 6vw, 4.5rem);
 }
 
 @media screen and (max-width: 910px) {

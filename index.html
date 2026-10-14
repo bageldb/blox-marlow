@@ -1,9 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="bgl-dark-mode">
 <head>
   <meta charset="UTF-8">
   <link rel="icon" href="/favicon.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Prerendered pages are dark from first paint: advertise a dark colour
+       scheme so the browser paints dark scrollbars/form controls and never
+       flashes a white canvas before hydration. -->
+  <meta name="color-scheme" content="dark">
   <title>My Site</title>
 </head>
 <body>

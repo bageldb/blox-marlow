@@ -1,15 +1,60 @@
-/* Site theme overrides — customize as needed */
+/* Site theme.
+ *
+ * This template is dark by default: `index.html` puts `bgl-dark-mode` on
+ * <html>, which switches @bagelink/vue to its dark palette. Blocks should style
+ * with design tokens (var(--bgl-bg), var(--bgl-box-bg), var(--bgl-primary), …)
+ * rather than hardcoded colors, so a rebrand is a token change here alone.
+ *
+ * Brand tokens below are the site's identity — change these, not the blocks.
+ */
+
 :root {
-	--bgl-primary: #2563eb;
-	--bgl-font: "Inter", system-ui, sans-serif;
+	/* Brand accent: warm champagne reads as precious on near-black. */
+	--bgl-primary: #c9a86a;
+
+	/* Display face for headings. A system serif keeps the page self-contained
+	   (no webfont round-trip) while giving editorial sections their voice. */
+	--bgl-font-display: 'Iowan Old Style', 'Palatino Linotype', Palatino, Georgia,
+		'Times New Roman', serif;
+	--bgl-font: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
 	--bgl-font-size: 16px;
-	--bgl-bg: #fff;
-	--bgl-btn-border-radius: 8px;
+
+	--bgl-btn-border-radius: 4px;
 	--bgl-card-border-radius: 12px;
-	--bgl-input-border-radius: 8px;
+	--bgl-input-border-radius: 6px;
+}
+
+/* Deepen the built-in dark surfaces slightly and warm the dividers, for a
+   calmer, more couture canvas than the default admin dark theme.
+   Same specificity as the library's rule but declared later, so it wins. */
+:root.bgl-dark-mode {
+	--bgl-dm-bg: #0d0e10;
+	--bgl-dm-surface: #16181b;
+	--bgl-dm-surface-2: #1d2024;
+	--bgl-dm-border: rgba(255, 255, 255, 0.1);
 }
 
 body {
 	margin: 0;
 	font-family: var(--bgl-font);
+}
+
+/* Editorial headings: display serif, tight tracking, balanced wrapping. */
+h1,
+h2,
+h3 {
+	font-family: var(--bgl-font-display);
+	font-weight: 400;
+	letter-spacing: -0.01em;
+}
+
+/* Small caps labels (eyebrows, section kickers) read better letter-spaced. */
+.blk-hero .txt12,
+.blk-features .txt12,
+.blk-steps .txt12,
+.blk-quotes .txt12,
+.blk-offices .txt12,
+.blk-faq .txt12,
+.blk-stats .txt12 {
+	letter-spacing: 0.14em;
 }

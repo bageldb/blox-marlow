@@ -134,7 +134,8 @@ const columnClass = computed(() => {
 }
 
 .blk-cards__card {
-	transition: transform 0.25s ease;
+	border: 1px solid var(--bgl-border-color, rgba(255, 255, 255, 0.1));
+	transition: transform 0.25s ease, border-color 0.25s ease;
 }
 
 /* Visible focus for keyboard users on the card's only interactive element. */
@@ -147,6 +148,7 @@ const columnClass = computed(() => {
 @media (hover: hover) {
 	.blk-cards__card:hover {
 		transform: translateY(-3px);
+		border-color: var(--bgl-primary);
 	}
 }
 
