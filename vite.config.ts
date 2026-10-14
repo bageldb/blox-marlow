@@ -11,10 +11,11 @@ export default defineConfig(({ isSsrBuild }) => ({
 		bagelink({ workspace }),
 	],
 	build: {
-		// The SSR pass runs after the client build and shares the same outDir.
-		// Vite empties outDir by default, which would delete the client's
-		// index.html (the shell `blox-ssg` renders every prerendered route from).
-		// Keep both outputs side by side.
-		...(isSsrBuild ? { ssr: true, emptyOutDir: false } : {}),
+		// The SSR pass writes the prerender bundle blox-ssg imports at build
+		// time. It must live in its own subdirectory: writing it into dist/ root
+		// makes Vite empty dist/ (deleting the client's index.html, which
+		// blox-ssg renders every route from), and blox-ssg then fails with
+		// "Cannot find module dist/server/main.server.js".
+		...(isSsrBuild ? { ssr: true, outDir: 'dist/server' } : {}),
 	},
 }))
