@@ -11,6 +11,10 @@ export default defineConfig(({ isSsrBuild }) => ({
 		bagelink({ workspace }),
 	],
 	build: {
-		...(isSsrBuild ? { ssr: true } : {}),
+		// The SSR pass runs after the client build and shares the same outDir.
+		// Vite empties outDir by default, which would delete the client's
+		// index.html (the shell `blox-ssg` renders every prerendered route from).
+		// Keep both outputs side by side.
+		...(isSsrBuild ? { ssr: true, emptyOutDir: false } : {}),
 	},
 }))
