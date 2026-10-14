@@ -5,9 +5,9 @@
     "": {
       "name": "@bageldb/blox-marlow",
       "dependencies": {
-        "@bagelink/blox": "^1.15.645",
-        "@bagelink/vue": "^1.15.645",
-        "@bagelink/workspace": "^1.15.645",
+        "@bagelink/blox": "^1.15.647",
+        "@bagelink/vue": "^1.15.647",
+        "@bagelink/workspace": "^1.15.647",
         "vue-router": "^5.4.0",
       },
       "devDependencies": {
@@ -28,13 +28,13 @@
 
     "@babel/types": ["@babel/types@8.0.6", "", { "dependencies": { "@babel/helper-string-parser": "^8.0.6", "@babel/helper-validator-identifier": "^8.0.6" } }, "sha512-c+xgSWboV2pdwXP67BUWDVRHi2BO5Q3KwxyFVs7taVTY+fsK47/L51ZXQoV9rozHJDNHvJ4v4WEsI/IlxV2l2A=="],
 
-    "@bagelink/blox": ["@bagelink/blox@1.15.645", "", { "dependencies": { "magic-string": "^0.30.21", "pinia": "^3.0.4" }, "peerDependencies": { "@bagelink/vue": "*", "happy-dom": ">=14.0.0", "vite": ">=5.0.0", "vue": "^3.3.0", "vue-router": "^4.0.0" }, "optionalPeers": ["happy-dom", "vite"], "bin": { "blox-ssg": "dist/ssg/cli.mjs" } }, "sha512-Dq3IZhWisC66alc/rIfoWNSaf8Z8Jce/OFqUfyGs/5lGXXkia82zDZuZBxIuhXyn3ImhlQiBr1TIXOYNignL2Q=="],
+    "@bagelink/blox": ["@bagelink/blox@1.15.647", "", { "dependencies": { "magic-string": "^0.30.21", "pinia": "^3.0.4" }, "peerDependencies": { "@bagelink/vue": "*", "happy-dom": ">=14.0.0", "vite": ">=5.0.0", "vue": "^3.3.0", "vue-router": "^4.0.0" }, "optionalPeers": ["happy-dom", "vite"], "bin": { "blox-ssg": "dist/ssg/cli.mjs" } }, "sha512-Z0RP2Xe74En9s8SpzYw4mVpFeI8tE1MoADMaMocvc6/hToB5XtOTBjYB2Ua3vhcrA9I2sw33TiqHGzB+T7rY+Q=="],
 
     "@bagelink/sdk": ["@bagelink/sdk@1.15.510", "", { "dependencies": { "axios": "^1.9.0", "eslint": "^9.28.0", "prettier": "^3.5.3", "vite": "^5.0.0" }, "peerDependencies": { "@typescript-eslint/typescript-estree": "^8.33.0", "type-fest": "^4", "vue": "^3.3.0" }, "bin": { "bagelink": "bin/index.ts" } }, "sha512-FJ15PW/GrUyFp6OW3if/thgatPltn1p2CkyKachMQbaKn4r+xCB+CMXUTEsF4sL40CTHPNEz3IsOczl+C/hSkA=="],
 
-    "@bagelink/vue": ["@bagelink/vue@1.15.645", "", { "dependencies": { "@floating-ui/dom": "^1.8.0", "@oddbird/popover-polyfill": "^0.6.1", "@vueuse/core": "^13.9.0", "@zxcvbn-ts/core": "^3.0.4", "axios": "^1.20.0", "floating-vue": "^5.4.0", "libphonenumber-js": "^1.13.14", "page-flip": "^2.0.7", "pdfjs-dist": "^6.3.289", "signature_pad": "^5.1.4", "swiper": "^12.2.0", "vue-i18n": "^11.4.12", "vue-toastification": "^2.0.0-rc.5" }, "peerDependencies": { "@bagelink/sdk": "*", "type-fest": "^4", "vue": "*", "vue-component-type-helpers": ">=2.2.10", "vue-draggable-next": "^2.2.1", "vue-router": "*" }, "optionalPeers": ["vue-draggable-next"], "bin": { "experimentalGenTypedRoutes": "./bin/experimentalGenTypedRoutes.ts" } }, "sha512-vmHkN4DKDY9wVXS4G25JB3LwCpbCt+bUqRXvIwSkUMje2Yk9l3ZAs6muuQ8uxfbxrL3MMbLfhs0euCIFziBBww=="],
+    "@bagelink/vue": ["@bagelink/vue@1.15.647", "", { "dependencies": { "@floating-ui/dom": "^1.8.0", "@oddbird/popover-polyfill": "^0.6.1", "@vueuse/core": "^13.9.0", "@zxcvbn-ts/core": "^3.0.4", "axios": "^1.20.0", "floating-vue": "^5.4.0", "libphonenumber-js": "^1.13.14", "page-flip": "^2.0.7", "pdfjs-dist": "^6.3.289", "signature_pad": "^5.1.4", "swiper": "^12.2.0", "vue-i18n": "^11.4.12", "vue-toastification": "^2.0.0-rc.5" }, "peerDependencies": { "@bagelink/sdk": "*", "type-fest": "^4", "vue": "*", "vue-component-type-helpers": ">=2.2.10", "vue-draggable-next": "^2.2.1", "vue-router": "*" }, "optionalPeers": ["vue-draggable-next"], "bin": { "experimentalGenTypedRoutes": "./bin/experimentalGenTypedRoutes.ts" } }, "sha512-Em3WehbVLCIzq4kq6FTy6FsuzaHQA2VM7shbbR4bivoxxHTQ32bd4GP4s/NO+nE2UcwNiG6k1OGmrx4xuFOZCA=="],
 
-    "@bagelink/workspace": ["@bagelink/workspace@1.15.645", "", { "dependencies": { "prompts": "^2.4.2" }, "peerDependencies": { "@bagelink/sdk": ">=1.0.0", "vite": ">=5.0.0" }, "optionalPeers": ["@bagelink/sdk"], "bin": { "bgl": "./dist/bin/bgl.mjs" } }, "sha512-uHJMj5cY95Oh5sQYrRMB/n2/dwm8r+TUTdgzKcEDtVNpiuMQzFsSLVP5+WH2uEYZekiMQXzElXz/dJY+1abuCw=="],
+    "@bagelink/workspace": ["@bagelink/workspace@1.15.647", "", { "dependencies": { "prompts": "^2.4.2" }, "peerDependencies": { "@bagelink/sdk": ">=1.0.0", "vite": ">=5.0.0" }, "optionalPeers": ["@bagelink/sdk"], "bin": { "bgl": "./dist/bin/bgl.mjs" } }, "sha512-nj2x51VG3ONNXMWzg+Hwk3DKxfKOMjZRgZ3NgeXStBYcO/qGEfzyjHdVnQf9vHBb0LCfFnh7qrNSmURtnMP9ow=="],
 
     "@esbuild/aix-ppc64": ["@esbuild/aix-ppc64@0.21.5", "", { "os": "aix", "cpu": "ppc64" }, "sha512-1SDgH6ZSPTlggy1yI6+Dbkiz8xzpHJEVAlF/AM1tHPLsf5STom9rwtjE4hKAF20FfXXNTFqEYXyJNWh1GiZedQ=="],
 
