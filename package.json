@@ -12,12 +12,12 @@
     "assert:output": "test -f dist/index.html && test -f dist/.blox-manifest.json",
     "preview": "vite preview"
   },
-  "dependencies": {
-    "@bagelink/blox": "file:vendor/bagelink-blox-1.15.536.tgz",
-    "@bagelink/vue": "^1.15.504",
-    "@bagelink/workspace": "^1.15.504",
-    "vue-router": "^4.6.4"
-  },
+	"dependencies": {
+		"@bagelink/blox": "^1.15.645",
+		"@bagelink/vue": "^1.15.645",
+		"@bagelink/workspace": "^1.15.645",
+		"vue-router": "^4.6.4"
+	},
   "devDependencies": {
     "@types/node": "latest",
     "@vitejs/plugin-vue": "^5",
