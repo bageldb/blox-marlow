@@ -10,12 +10,21 @@ export default defineConfig(({ isSsrBuild }) => ({
 		vue(),
 		bagelink({ workspace }),
 	],
+	// Render the Bagel packages from source in the SSR bundle, as every Blox
+	// site does — externalising them breaks resolution at prerender time.
+	ssr: {
+		noExternal: ['@bagelink/blox', '@bagelink/vue', 'vue', 'vue-router', 'pinia'],
+	},
 	build: {
-		// The SSR pass writes the prerender bundle blox-ssg imports at build
-		// time. It must live in its own subdirectory: writing it into dist/ root
-		// makes Vite empty dist/ (deleting the client's index.html, which
-		// blox-ssg renders every route from), and blox-ssg then fails with
-		// "Cannot find module dist/server/main.server.js".
-		...(isSsrBuild ? { ssr: true, outDir: 'dist/server' } : {}),
+		// The prerender pass emits the bundle blox-ssg imports at build time. It
+		// goes in its own directory so the client build's dist/index.html — the
+		// shell every prerendered route is rendered from — is left intact.
+		...(isSsrBuild
+			? {
+				ssr: true,
+				rollupOptions: { input: 'src/main.server.ts' },
+				outDir: 'dist/server',
+			}
+			: {}),
 	},
 }))
